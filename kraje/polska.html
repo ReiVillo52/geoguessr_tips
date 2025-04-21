@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geoguessr Guide - Poland</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+            --main-color: #007BFF;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e0e0e0;
+            text-align: center;
+        }
+
+        .hero {
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 50px 20px;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: 0;
+        }
+
+        .hero h1,
+        .hero nav,
+        .image-row {
+            position: relative;
+            z-index: 1;
+        }
+
+        .image-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .image-row img {
+            width: 100px;
+            max-width: 20vw;
+            height: auto;
+            border-radius: 5px;
+            border: 2px solid #ddd;
+            transition: transform 0.3s ease;
+        }
+
+        .image-row img:hover {
+            transform: scale(1.05);
+        }
+
+        nav {
+            background-color: rgba(0, 0, 0, 0.7);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: var(--main-color);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .sub-nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px;
+            background: #333;
+            border-radius: 5px;
+        }
+
+        .sub-nav ul li {
+            display: inline;
+        }
+
+        .sub-nav ul li a {
+            color: var(--main-color);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .sub-nav ul li a:hover {
+            color: #ffffff;
+        }
+
+        section {
+            margin: 20px 0;
+            padding: 15px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 24px;
+            border-bottom: 3px solid #333;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .license-plates {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .license-plates img {
+            width: 220px;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .license-plates p {
+            margin: 0;
+            max-width: 500px;
+        }
+
+        .section-img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            margin-bottom: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .section-img:hover {
+            transform: scale(1.05);
+        }
+
+        .img-row {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+
+        blockquote {
+            font-style: italic;
+            color: #333;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+
+        ul {
+            text-align: left;
+            max-width: 600px;
+            margin: 10px auto;
+            padding-left: 20px;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 24px;
+            }
+
+            .section-img {
+                max-width: 90%;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            .image-row img {
+                max-width: 80px;
+            }
+
+            .license-plates {
+                flex-direction: column;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }          
+        }
+        .note {
+            color: #5a3e1b; /* ciemniejszy odcień burlywood dla lepszej czytelności */
+            background-color: #f5deb3; /* burlywood jako tło */
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-style: italic;
+            margin: 1em 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* delikatny cień */
+        }
+        p{
+            background-color: #e0e0e0; /* burlywood jako tło */
+            padding: 8px 15px;
+            border-radius: 10px;
+            margin: 1em 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* delikatny cień */
+        }
+    </style>
+</head>
+
+<body>
+    <header class="hero" style="background-image: url('images/country-bg.jpg');">
+        <h1>Tutorial: Poland</h1>
+        <div class="image-row">
+            <img src="img/Polska/polska.png" alt="Country Border">
+            <img src="img/Polska/domena.png" alt="Internet Domain">
+            <img src="img/ruch_prawostronny.png" alt="Traffic Side">
+            <img src="images/camera.jpg" alt="Camera Generation">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../strona_glowna.html">Main Page</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <nav class="sub-nav">
+            <ul>
+                <li><a href="#google-car">Google Car</a></li>
+                <li><a href="#plates">License Plates</a></li>
+                <li><a href="#language">Language</a></li>
+                <li><a href="#landscape">Landscape & Infrastructure</a></li>
+                <li><a href="#road-signs">Road Signs & Lanes</a></li>
+                <li><a href="#additional">Additional Info</a></li>
+            </ul>
+        </nav>
+
+        <section id="google-car">
+            <h2>Google Car</h2>
+            <p>Poland doesn't have a special car.</p>
+        </section>
+
+        <section id="plates">
+            <h2>License Plates</h2>
+            <div class="license-plates">
+                <img class="section-img"src="img/Polska/Tablice_rejestracyjne.png" alt="Polish License Plate">
+                <p>
+                    Polish license plates are <b>long and white with black letters</b>, and feature the <b>European Union blue strip</b> on the left side.
+                </p>
+            </div>
+        </section>
+
+        <section id="language">
+            <h2>Language</h2>
+            <p>Polish is a Slavic language. It includes:</p>
+            <ul>
+                <li><strong>Ł</strong> with a stroke through it <em>(unique to Polish)</em></li>
+                <li><strong>Ą</strong> and <strong>Ę</strong> with a small hook <em>(also found in Lithuanian)</em></li>
+                <li><strong>Ć, Ń, Ó, Ś, Ź</strong> with an acute accent</li>
+                <li><strong>Ż</strong> with a small dot <em>(unique to Polish)</em></li>
+            </ul>
+            <p>Example sentence:</p>
+            <blockquote>
+                Spacerując po parku, zauważyłem piękne, kolorowe kwiaty. Słońce delikatnie ogrzewało moją twarz, a ptaki śpiewały wesołe melodie. Lekki wiatr kołysał gałęziami drzew, tworząc przyjemny, relaksujący klimat. To był idealny dzień na odpoczynek i kontemplację.
+            </blockquote>
+        </section>
+
+        <section id="landscape">
+            <h2>Landscape & Infrastructure</h2>
+           
+            <p>Polish architecture is <strong>similar to other European countries</strong>. In city centers, tenement houses <em>(often in light colors)</em> dominate. Roofs are most often <strong>covered with tiles</strong> <em>(most often red and orange)</em>. The urban landscape is dominated by <strong>single-family</strong> homes. In larger cities, apartment blocks <em>(still from the communist era)</em> dominate. In Poland, churches are often found in smaller towns/villages.</p>
+            <div class="img-row">
+                <img class="section-img" src="img/Polska/architektura1-3.png" alt="Polish Architecture 1">
+                <img class="section-img" src="img/Polska/architektura4-6.png" alt="Polish Architecture 2">
+            </div>
+            <p>You can also observe <strong>"roads between trees"</strong> and <strong>"Christian shrines"</strong> <em>(Poland is one of the most Catholic countries in Europe)</em>.</p>
+            <div class="img-row">
+                <img class="section-img" src="img/Polska/drogi_miedzy_drzewami.JPG" alt="Polish Architecture 3">
+                <img class="section-img" src="img/Polska/Poland-Christian-shrines.png" alt="Polish Architecture 4">
+            </div>
+        </section>
+
+        <section id="road-signs">
+            <h2>Road Signs & Lanes</h2>
+            <p>Polish bollards have a red strip that wraps all the way around the bollard. This strip has a red reflector on the front <em>(sometimes hard to see)</em>, and a white reflector on the back. Bollards sometimes have numbers on them.</p>
+            <p class="note">Same design can be found in Zakarpattia Oblast in Ukraine.</p>
+            <div class="img-row">
+                <img class="section-img" src="img/Polska/słupki_drogowe.png">
+            </div>
+            <p><strong>Polish direction signs:</strong> green background and these signs use a distinct font, which is a good clue for Poland.</p>
+            <div class="img-row">
+                <img class="section-img" src="img/Polska/jak_daleko_miasta.PNG">
+            </div>
+            <p><strong>Warning signs:</strong> triangular, yellow background and distinct thin red border<br>
+            <strong>Prohibitory signs:</strong> round, white background, thicker red border<br>
+            <strong>Pedestrian sign:</strong> unique, single horizontal line instead of the usual zebra stripes<br>
+            <strong>Town entry signs:</strong> two, green one with the location name, the other one white with a stylized urban area
+            in black color <br>
+            </p>
+            <div class="img-row">
+                <img class="section-img" src="img/Polska/znaki.PNG">
+            </div>
+            <p><strong>Guardrails:</strong> square (normal B-type) with red circular reflectors</p>
+            <div class="img-row">
+                <img class="section-img" src="img/Polska/barierki_drogowe.JPG">
+            </div>
+            <p><strong>Roads: </strong>white road lines and double middle lines are very common</p>
+            <div class="img-row">
+                <img class="section-img" src="img/Polska/drogi.PNG">
+            </div>
+            <p><strong>Electricity poles: </strong>holes <em>(holes often do not extend all the way to the bottom of the pole)</em>, Sometimes: two poles are joined together, or put in an A-frame shape, also you can find round concrete poles</p>
+            <div class="img-row">
+                <img class="section-img" src="img/Polska/słupy_prądowe.png">
+            </div>
+        </section>
+
+        <section id="additional">
+            <h2>Additional Info</h2>
+            <p>Other important details for identifying the country...</p>
+        </section>
+    </main>
+</body>
+</html>
